@@ -8,8 +8,6 @@ import matplotlib.pyplot as plt
 matplotlib.use('agg')
 from PIL import Image
 
-import cv2
-
 
 ### SET UP ###
 def get_image(image, n_clusters):
@@ -108,7 +106,7 @@ The goal of clustering is to summarize or group data into a certain number of cl
 Thinking again about the plot, what clustering would be doing is finding clusters of
 pixels that were all close together (or similar colors) and creating a point in the center of those.
 
-What is nice about clustering is we can choose how many of these clusters we want to look for and
+What is nice about clustering is that we can choose how many of these clusters we want to look for and
 as we change this number we start to get closer to original representation of the data. Clustering
 in a way is a compression or summary of our data.
 
