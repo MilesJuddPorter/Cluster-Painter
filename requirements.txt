@@ -1,6 +1,5 @@
 pandas
 numpy
-opencv-python
 streamlit
 Pillow
 sklearn

@@ -1,13 +1,13 @@
-import cv2
 import pandas as pd
 import numpy as np
 from matplotlib.pyplot import *
 from sklearn.cluster import KMeans
+from PIL import Image
 
 class Painter():
 	def __init__(self, image):
 		self.image = image
-		self.smol_img = cv2.resize(image, (0,0),fx=0.1, fy=0.1)
+		self.smol_img = np.array(Image.fromarray(image).resize((image.shape[0]//10,image.shape[1]//10),0))
 		self.color_df = pd.DataFrame(data={color:self.image[:,:,ii].ravel() for ii,color in enumerate(['r','g','b']) })
 		self.smol_color_df = pd.DataFrame(data={color:self.smol_img[:,:,ii].ravel() for ii,color in enumerate(['r','g','b']) })
 		self.fitted_kmeans = {ii:None for ii in range(1,10)}
