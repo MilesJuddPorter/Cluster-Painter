@@ -1,6 +1,6 @@
 pandas
 numpy
-cv2
+opencv-python
 streamlit
 PIL
 sklearn
